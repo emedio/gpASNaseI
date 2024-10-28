@@ -1,0 +1,26 @@
+Relaxing the system at a constant pressure
+ &cntrl
+  imin = 0,          !Molecular dynamics without minimization
+  irest = 0,         !No reestart
+  ntx = 1,           !Read coordinates
+  nstlim = 1000000,  !Number of MD steps
+  dt = 0.001,        !Time step (ps)
+  ig = -1,           !The random seed number is based on current date and time of the run
+  temp0 = 310.0,     !Reference or target temperature (300 K)
+  ntc = 2,           !Bonds involving H are constrained
+  ntf = 2,           !Bonds involving H are omitted from force evaluation
+  ntwr = 1000,       !Every ntwr steps the .restrt file is written
+  ntwx = 1000,       !Every ntwx steps coordinates are written in the trajectory file
+  ntpr = 1000,       !Every ntpr steps information is printed in the output file 
+  cut = 8,           !The non-bonded cutoff is 8.0 Angstroms
+  iwrap = 0,         !No wrapping is performed (output restart and trajectory wrapped into primary box)
+  ntt = 3,           !Langevin thermostat for temperature control is set 
+  gamma_ln = 1.0,    !Collision frequency to use langevin dynamics
+  ntb = 2,           !Constant pressure
+  ntp = 1,           !Use isotropic pressure scaling
+  barostat = 2,      !Use monte carlo barostat
+  ntr = 1,           !Flag to restrain atom positions
+  restraintmask = '@CA,C,N',
+  restraint_wt=7.5, !Positional restraint (100 kcal/mol*Ang^-2)
+  ntxo=1,        !Format (ASCII) of the final coordinates in the rst file
+/

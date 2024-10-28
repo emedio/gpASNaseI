@@ -1,0 +1,17 @@
+Minimization with restraint on backbone of protein and ssRNA and ATP
+&cntrl
+ imin = 1,               !Flag to run energy minimization
+ maxcyc = 1000,         !Maximum number of minimization steps
+ ncyc = 30,             !Minimization switches from steepest descend to conjugated gradient after 200 cycles
+ dx0 = 0.2,              !Initial step length
+ cut = 10.0,
+ ntb = 1,                !Constant volume periodic boundary
+ ntpr = 10,              !Every ntpr steps the information is printed in the output file
+ ntxo = 1,               !Format (ASCII) of the final coordinates in the rst file.
+ ntr = 1,                !Flag to restrict atom movement using an harmonic potential
+ restraint_wt = 10.0,   !Force constant of the restrain (kcal/mol·A)
+ restraintmask = '@CA,N,C',  !Flag to specify which atoms are restricted. 
+ !nmropt = 1
+ /
+ !&wt type = 'END'/
+ !DISANG = restr.1

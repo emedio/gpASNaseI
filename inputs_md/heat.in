@@ -1,0 +1,32 @@
+Heating from 100K to 310K
+ &cntrl
+  imin = 0,          !Molecular dynamics without minimization
+  irest = 0,         !The simulation will not be restarted
+  ntx = 1,           !Read coordinates but no velocities.
+  nstlim = 1000000,  !Number of MD steps
+  dt = 0.001,        !Time step (ps)
+  ig = -1,           !The random seed number is based on current date and time of the run
+  tempi = 100.0,     !Initial temperature (100 K)
+  temp0 = 310.0,     !Reference or target temperature (300 K)
+  ntc = 2,           !Bonds involving H are constrained
+  ntf = 2,           !Bonds involving H are omitted from force evaluation
+  ntwr = 1000,       !Every ntwr steps the .restrt file is written
+  ntwx = 1000,       !Every ntwx steps coordinates are written in the trajectory file
+  ntpr = 1000,       !Every ntpr steps information is printed in the output file 
+  cut = 8,           !The non-bonded cutoff is 8.0 Angstroms
+  iwrap = 0,         !No wrapping is performed (output restart and trajectory wrapped into primary box)
+  ntt = 3,           !Langevin thermostat for temperature control is set 
+  gamma_ln = 1.0,    !Collision frequency to use langevin dynamics
+  ntb = 1,           !Constant volume
+  ntp = 0,           !No pressure scaling 
+  ntr = 1,           !Flag to restrain atom positions
+  restraintmask = ':1-1452 &!@H',  
+  restraint_wt=100.0, !Positional restraint (100 kcal/mol*Ang^-2)
+  nmropt = 1,         !NMR restraints and weight changes are read
+  ntxo=1,             !Format (ASCII) of the final coordinates in the rst file
+/
+&wt type='TEMP0', istep1=0, istep2=1000000,  !Changue in T will happen in 1000000 increments
+  value1=100.0, value2=310.0,                !Start and final temperature
+/
+&wt type='END',/
+/

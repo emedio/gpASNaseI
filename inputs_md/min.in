@@ -1,0 +1,15 @@
+Initial minimization
+ &cntrl
+ imin=1,        !Flag to run energy minimization
+ maxcyc=1000,   !Maximum number of minimization steps
+ ncyc=20,       !Minimization switches from SD to CG after 20 cycles
+ dx0 = 0.2,     !Initial step length
+ ntb=1,         !Constant volume periodic boundary
+ ntpr = 10,     !Every ntpr steps the information is printed in the output file
+ ntxo = 1,      !Format (ASCII) of the final coordinates in the rst file.
+ ntr = 1,       !Flag to restrict atom movement using an harmonic potential
+ cut=10.0, 
+ iwrap=1,
+ restraintmask = ':1-1452 &!@H',
+ restraint_wt = 100.0,
+ /
