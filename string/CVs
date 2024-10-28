@@ -1,0 +1,82 @@
+16
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 21622, 21623
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 21623, 116690
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 116690, 116692
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 116692, 59714
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 59714, 59716
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 59716, 127613
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 127613, 127615
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 127615, 1808
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 21622, 285
+$END
+ 
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 284, 285
+$END
+ 
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 284, 5612
+$END
+ 
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 5614, 1797
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 1796, 1797
+$END
+ 
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 5614, 5612
+$END
+ 
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 2930, 1796
+$END
+
+$COLVAR
+COLVAR_type = "BOND"
+atoms = 2930, 2929
+$END
+
