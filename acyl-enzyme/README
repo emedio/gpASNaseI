@@ -1,0 +1,3 @@
+Files ACY.frcmod and ACY.prepin are parameter files for the acyl-enzyme (Thr19-Asp) residue. 
+Acyl-enzyme.pdb is a representative structure of the covalent intermediate structure, while
+config.conf is the input file for the TUPA electric field analysis. 
